@@ -6,6 +6,9 @@ from litellm import Cache
 from dotenv import load_dotenv
 
 load_dotenv()
+PROVIDER_TIMEOUT_SECONDS = float(
+    os.getenv("PROVIDER_TIMEOUT_SECONDS", "8")
+)
 litellm.cache = Cache(type="local")
 
 
@@ -95,6 +98,8 @@ def is_retryable_error(error):
         "502",
         "503",
         "service unavailable",
+        "timeout",
+        "timed out",
     ]
 
     return any(
@@ -140,6 +145,7 @@ def generate_reply(
                 model=provider["model"],
                 messages=messages,
                 api_key=provider["api_key"],
+                timeout=PROVIDER_TIMEOUT_SECONDS,
             )
             hidden_params = getattr(
                 response,
