@@ -586,7 +586,7 @@ Production CORS will be configured to allow the deployed frontend origin.
 # Demo Video
 
 ```text
-TODO: Add 2-3 minute demo video URL
+https://drive.google.com/file/d/1es3JKWdMPYr9xSomS1tfFItZU_Vp5GJI/view?usp=sharing
 ```
 
 The demo video will show:
