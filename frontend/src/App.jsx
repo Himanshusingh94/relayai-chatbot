@@ -259,16 +259,12 @@ function App() {
                   <span
                     data-testid="meta-source"
                     className={`source-badge ${
-                      metadata.resolution_source ===
-                      "LLM_CACHE"
+                      metadata.resolution_source === "LLM_CACHE"
                         ? "cache"
                         : "live"
                     }`}
                   >
-                    {metadata.resolution_source ===
-                    "LLM_CACHE"
-                      ? "CACHE"
-                      : "LIVE"}
+                    {metadata.resolution_source}
                   </span>
 
                   <span
