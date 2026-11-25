@@ -570,13 +570,13 @@ These allow automated UI testing without relying on CSS classes or visible text.
 ## Frontend
 
 ```text
-TODO: Add deployed frontend URL
+https://relayai-chatbot.vercel.app
 ```
 
 ## Backend
 
 ```text
-TODO: Add deployed backend URL
+https://relayai-backend-a9ce.onrender.com
 ```
 
 Production CORS will be configured to allow the deployed frontend origin.
